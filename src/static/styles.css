@@ -107,16 +107,24 @@ h3 {
   color: #555;
   font-size: 0.9rem;
   position: relative;
-  padding-left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.participants-list li::before {
-  content: "•";
-  color: #667eea;
-  font-weight: bold;
-  font-size: 1.2rem;
-  position: absolute;
-  left: 0.5rem;
+.delete-icon {
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 1.1rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.delete-icon:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+  transform: scale(1.1);
 }
 
 .no-participants {
